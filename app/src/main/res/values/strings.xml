@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MetaKart</string>
+    <string name="category_elex">Electronics</string>
+    <string name="category_fashion">Fashion</string>
+    <string name="category_books">Books</string>
+    <string name="category_games">Games</string>
 </resources>
