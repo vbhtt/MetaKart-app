@@ -12,14 +12,11 @@
         android:scaleType="centerCrop"
         android:src="@drawable/fashion" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/header_image_view">
-
         <android.support.v7.widget.CardView
+            android:id="@+id/title_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/header_image_view"
             android:layout_margin="16dp"
             android:padding="26dp"
             app:cardCornerRadius="4dp"
@@ -52,6 +49,23 @@
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
-    </ScrollView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/description_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_card"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="26dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+        </android.support.v7.widget.CardView>
 
 </RelativeLayout>

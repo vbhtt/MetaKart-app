@@ -69,9 +69,9 @@ public class ProductList extends AppCompatActivity {
 
     private void initialiseData() {
         productList = new ArrayList<>();
-        productList.add(new Product("Electronic", "Sony", 125, 4.5, R.drawable.elex));
-        productList.add(new Product("Book", "dcdc", 125, 3.6, R.drawable.book));
-        productList.add(new Product("Fashino", "cdcdcvv", 125, 5, R.drawable.fashion));
-        productList.add(new Product("Game", "EA", 125, 4.4, R.drawable.games));
+        productList.add(new Product("Electronic", "Sony", 125, 4.5, R.drawable.elex,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+        productList.add(new Product("Book", "dcdc", 125, 3.6, R.drawable.book, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+        productList.add(new Product("Fashino", "cdcdcvv", 125, 5, R.drawable.fashion, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+        productList.add(new Product("Game", "EA", 125, 4.4, R.drawable.games, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
     }
 }
