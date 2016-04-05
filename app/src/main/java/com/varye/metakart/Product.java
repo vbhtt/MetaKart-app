@@ -1,9 +1,11 @@
 package com.varye.metakart;
 
+import java.io.Serializable;
+
 /**
  * Created by Varun on 07-03-2016.
  */
-public class Product {
+public class Product implements Serializable{
     String productName, brand;
     int price;
     double rating;
