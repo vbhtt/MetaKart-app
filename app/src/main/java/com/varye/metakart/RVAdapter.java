@@ -60,7 +60,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         //ProductViewHolder.productImage.setImageResource(products.get(position).thumb);
         //ProductViewHolder.productImage.setImageResource(R.drawable.elex);
-        Picasso.with(context).load(products.get(position).image).error(R.drawable.elex).into(ProductViewHolder.productImage);
+        Picasso.with(context).load(products.get(position).image).placeholder(R.drawable.stock).into(ProductViewHolder.productImage);
         ProductViewHolder.productTitle.setText(products.get(position).name);
         ProductViewHolder.price.setText("Rs." + products.get(position).price);
     }
