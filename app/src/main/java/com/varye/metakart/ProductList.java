@@ -119,16 +119,17 @@ public class ProductList extends AppCompatActivity {
             @Override
             protected String doInBackground(Void... params) {
                 RequestHandler rh = new RequestHandler();
-                String s = rh.sendGetRequestParam(Config.URL_GET_ALL,"electronics");
-                return s;
+                return rh.sendGetRequestParam(Config.URL_GET_ALL,"electronics");
             }
         }
         GetJSON gj = new GetJSON();
         gj.execute();
     }
 
+
+
     private void initialiseAdapter() {
-        RVAdapter rvadapter = new RVAdapter(productList);
+        RVAdapter rvadapter = new RVAdapter(productList, getApplicationContext());
         Log.d("ProductListActivity", productList.toString());
         recyclerView.setAdapter(rvadapter);
 

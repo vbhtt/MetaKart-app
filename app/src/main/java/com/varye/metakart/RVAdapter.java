@@ -1,5 +1,6 @@
 package com.varye.metakart;
 
+import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -34,9 +37,11 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
     }
 
     List<Product> products;
+    Context context;
 
-    RVAdapter(List<Product> products) {
+    RVAdapter(List<Product> products, Context context) {
         this.products = products;
+        this.context=context;
     }
 
     @Override
@@ -54,7 +59,8 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         //ProductViewHolder.productImage.setImageResource(products.get(position).thumb);
-        ProductViewHolder.productImage.setImageResource(R.drawable.elex);
+        //ProductViewHolder.productImage.setImageResource(R.drawable.elex);
+        Picasso.with(context).load(products.get(position).image).error(R.drawable.elex).into(ProductViewHolder.productImage);
         ProductViewHolder.productTitle.setText(products.get(position).name);
         ProductViewHolder.price.setText("Rs." + products.get(position).price);
     }
