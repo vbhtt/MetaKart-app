@@ -53,8 +53,9 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
-        ProductViewHolder.productImage.setImageResource(products.get(position).thumb);
-        ProductViewHolder.productTitle.setText(products.get(position).productName);
+        //ProductViewHolder.productImage.setImageResource(products.get(position).thumb);
+        ProductViewHolder.productImage.setImageResource(R.drawable.elex);
+        ProductViewHolder.productTitle.setText(products.get(position).name);
         ProductViewHolder.price.setText("Rs." + products.get(position).price);
     }
 

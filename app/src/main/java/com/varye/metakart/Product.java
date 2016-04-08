@@ -6,16 +6,14 @@ import java.io.Serializable;
  * Created by Varun on 07-03-2016.
  */
 public class Product implements Serializable{
-    String productName, brand;
-    int price;
-    double rating;
-    int thumb;
+    String id, name, description, rating, image, price;
 
-    Product(String productName, String brand, int price, double rating, int thumb, String description) {
-        this.productName = productName;
-        this.brand = brand;
-        this.price = price;
-        this.rating = rating;
-        this.thumb = thumb;
+    Product(String id, String name, String description, String rating, String image, String price){
+        this.id=id;
+        this.name=name;
+        this.description=description;
+        this.rating=rating;
+        this.image=image;
+        this.price=price;
     }
 }
