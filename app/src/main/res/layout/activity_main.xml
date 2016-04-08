@@ -28,7 +28,7 @@
                 android:layout_margin="16dp"
                 android:layout_weight="1"
                 android:foreground="@drawable/card_foreground"
-                android:onClick="cardClick"
+                android:onClick="elexCardClick"
                 card_view:cardCornerRadius="4dp"
                 card_view:cardElevation="4dp">
 
@@ -65,8 +65,11 @@
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
+                android:foreground="@drawable/card_foreground"
                 card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="4dp">
+                card_view:cardElevation="4dp"
+                android:onClick="fashionCardClick"
+                android:nestedScrollingEnabled="true">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -107,9 +110,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
+                android:foreground="@drawable/card_foreground"
                 android:layout_weight="1"
                 card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="4dp">
+                card_view:cardElevation="4dp"
+                android:onClick="bookCardClick">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -143,9 +148,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
+                android:foreground="@drawable/card_foreground"
                 android:layout_weight="1"
                 card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="4dp">
+                card_view:cardElevation="4dp"
+                android:onClick="gameCardClick">
 
                 <RelativeLayout
                     android:layout_width="match_parent"

@@ -19,7 +19,7 @@ public class ProductDetails extends AppCompatActivity {
         Product p = (Product) intent.getSerializableExtra("data");
 
         ImageView productImageView = (ImageView) findViewById(R.id.header_image_view);
-        Picasso.with(ProductDetails.this).load(p.image).placeholder(R.drawable.elex).into(productImageView);
+        Picasso.with(ProductDetails.this).load(p.image).fit().centerCrop().placeholder(R.drawable.elex).into(productImageView);
 
         TextView title = (TextView) findViewById(R.id.title_tv);
         assert title != null;

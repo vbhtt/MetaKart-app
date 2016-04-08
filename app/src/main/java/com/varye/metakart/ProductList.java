@@ -17,19 +17,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class ProductList extends AppCompatActivity {
 
     private List<Product> productList;
     private RecyclerView recyclerView;
-    private String JSON_STRING;
+    private String JSON_STRING, category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
+        Intent i = getIntent();
+        category = i.getStringExtra("category");
         productList = new ArrayList<>();
         getJSON();
         recyclerView = (RecyclerView) findViewById(R.id.rv);
@@ -72,8 +73,7 @@ public class ProductList extends AppCompatActivity {
     }
 
     private void showProduct(){
-        JSONObject jsonObject = null;
-        ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String, String>>();
+        JSONObject jsonObject;
         try {
             jsonObject = new JSONObject(JSON_STRING);
             JSONArray result = jsonObject.getJSONArray(Config.TAG_JSON_ARRAY);
@@ -119,7 +119,7 @@ public class ProductList extends AppCompatActivity {
             @Override
             protected String doInBackground(Void... params) {
                 RequestHandler rh = new RequestHandler();
-                return rh.sendGetRequestParam(Config.URL_GET_ALL,"electronics");
+                return rh.sendGetRequestParam(Config.URL_GET_ALL,category);
             }
         }
         GetJSON gj = new GetJSON();
