@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.varye.metakart"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -32,4 +32,6 @@ dependencies {
     compile 'com.android.support:design:23.2.1'
     //compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    compile 'com.squareup.dagger:dagger-compiler:1.2.2'
 }

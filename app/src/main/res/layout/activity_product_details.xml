@@ -78,6 +78,41 @@
                     android:padding="16dp"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
             </android.support.v7.widget.CardView>
+
+            <Button
+                style="@android:style/Widget.Material.Button.Colored"
+                android:id="@+id/purchase_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:padding="16dp"
+                android:text="@string/buy_now"
+                />
+            <TextView
+                android:id="@+id/confirmation_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textColor="?android:attr/colorAccent"
+                android:text="@string/purchase_done"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/encrypted_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textColor="?android:attr/colorAccent"
+                android:text="@string/purchase_done"
+                android:visibility="gone"/>
         </LinearLayout>
     </ScrollView>
 
