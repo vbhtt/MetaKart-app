@@ -178,6 +178,8 @@ public class ProductDetails extends Activity {
             // Authentication happened with backup password. Just show the confirmation message.
             showConfirmation(null);
         }
+        Toast.makeText(this,"Purchase Successful!",Toast.LENGTH_LONG).show();
+        finish();
     }
 
     // Show confirmation, if fingerprint was used show crypto information.
@@ -187,8 +189,6 @@ public class ProductDetails extends Activity {
             //TextView v = (TextView) findViewById(R.id.encrypted_message);
             //v.setVisibility(View.VISIBLE);
             //v.setText(Base64.encodeToString(encrypted, 0 /* flags */));
-            Toast.makeText(this,"Purchase Successful!",Toast.LENGTH_LONG).show();
-            finish();
         }
     }
 

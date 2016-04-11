@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 import javax.inject.Inject;
 
 /**
@@ -182,9 +184,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
      * @return true if {@code password} is correct, false otherwise
      */
     private boolean checkPassword(String password) {
-        // Assume the password is always correct.
-        // In the real world situation, the password needs to be verified in the server side.
-        return password.length() > 0;
+        return Objects.equals(password, "vvvvvv");
     }
 
     private final Runnable mShowKeyboardRunnable = new Runnable() {

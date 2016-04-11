@@ -3,6 +3,7 @@
     package="com.varye.metakart">
 
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".InjectedApplication"
         android:allowBackup="true"
@@ -28,6 +29,5 @@
                 android:value="com.varye.metakart.ProductList" />
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

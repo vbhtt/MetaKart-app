@@ -52,17 +52,14 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ProductViewHolder>
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.product_card, viewGroup, false);
-        ProductViewHolder pvh = new ProductViewHolder(v);
-        return pvh;
+        return new ProductViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
-        //ProductViewHolder.productImage.setImageResource(products.get(position).thumb);
-        //ProductViewHolder.productImage.setImageResource(R.drawable.elex);
         Picasso.with(context).load(products.get(position).image).placeholder(R.drawable.stock).into(ProductViewHolder.productImage);
         ProductViewHolder.productTitle.setText(products.get(position).name);
-        ProductViewHolder.price.setText("Rs." + products.get(position).price);
+        ProductViewHolder.price.setText(String.format("Rs. %s",products.get(position).price));
     }
 
     @Override
