@@ -184,9 +184,11 @@ public class ProductDetails extends Activity {
     private void showConfirmation(byte[] encrypted) {
         findViewById(R.id.confirmation_message).setVisibility(View.VISIBLE);
         if (encrypted != null) {
-            TextView v = (TextView) findViewById(R.id.encrypted_message);
-            v.setVisibility(View.VISIBLE);
-            v.setText(Base64.encodeToString(encrypted, 0 /* flags */));
+            //TextView v = (TextView) findViewById(R.id.encrypted_message);
+            //v.setVisibility(View.VISIBLE);
+            //v.setText(Base64.encodeToString(encrypted, 0 /* flags */));
+            Toast.makeText(this,"Purchase Successful!",Toast.LENGTH_LONG).show();
+            finish();
         }
     }
 
